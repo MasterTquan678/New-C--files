@@ -1,0 +1,47 @@
+//************************************************************************************************************//
+// Months of the Year
+// Author: Antquan Smiley II
+// Date: 10/2/2026
+// Description: This program prompts the user to enter a number between 1 and 12, and then displays the corresponding month name. If the input is invalid, it informs the user
+//************************************************************************************************************//
+
+using System;
+
+class MonthsOfTheYear
+{
+    static void Main(string[] args)
+    { // Prompt the user to enter a number between 1 and 12
+        Console.WriteLine("Please enter a number between 1 and 12:");
+        int monthNumber = Convert.ToInt32(Console.ReadLine());
+// Get the corresponding month name
+        string monthName = GetMonthName(monthNumber);
+        if (monthName != null)
+        {
+            Console.WriteLine($"The month corresponding to {monthNumber} is {monthName}.");
+        }
+        else
+        {
+            Console.WriteLine("Invalid input. Please enter a number between 1 and 12.");
+        }
+    }
+// Method to get the month name based on the month number
+    static string GetMonthName(int monthNumber)
+    {
+        switch (monthNumber)
+        {
+            case 1: return "January";
+            case 2: return "February";
+            case 3: return "March";
+            case 4: return "April";
+            case 5: return "May";
+            case 6: return "June";
+            case 7: return "July";
+            case 8: return "August";
+            case 9: return "September";
+            case 10: return "October";
+            case 11: return "November";
+            case 12: return "December";
+            default: return null;
+        }
+    }
+}
